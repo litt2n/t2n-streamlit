@@ -34,7 +34,7 @@ dicNumMonth = {v: k for k, v in dicMonth.items()}
 
 @st.cache
 def quoteDaily(strTicker):
-    apiKey = os.environ.get['apiKey']
+    apiKey = os.environ.get('apiKey')
 #     strTicker = 'AAPL'
     path = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=' + strTicker + '&outputsize=full&apikey=' + apiKey + '&datatype=csv'
     try:
@@ -51,7 +51,7 @@ def quoteDaily(strTicker):
 #
 @st.cache
 def searchTicker(strTicker):
-    apiKey = os.environ.get['apiKey']
+    apiKey = os.environ.get('apiKey')
 #     strTicker = 'AAPL'
     path = 'https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=' + strTicker + '&apikey=' + apiKey + '&datatype=csv'
     try:
